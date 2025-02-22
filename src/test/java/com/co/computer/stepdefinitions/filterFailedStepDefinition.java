@@ -2,6 +2,7 @@ package com.co.computer.stepdefinitions;
 
 import com.co.computer.exception.messageException;
 import com.co.computer.models.filterComputer;
+import com.co.computer.questions.alertMessage;
 import com.co.computer.tasks.filterComputerTask;
 import com.co.computer.utils.Constants;
 import io.cucumber.datatable.DataTable;
@@ -17,7 +18,10 @@ import org.hamcrest.Matchers;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
 
 public class filterFailedStepDefinition {
 
@@ -33,10 +37,8 @@ public class filterFailedStepDefinition {
     }
     @Then("The system show alert message")
     public void theSystemShowAlertMessage() {
-        theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(
-                        TheWebPage.title(),
-                        Matchers.containsString(Constants.NAME_FOUND)).orComplainWith(messageException.class, Constants.MessageExceptionCompare));
+        OnStage.theActorInTheSpotlight().should(seeThat(alertMessage.es(), containsString(Constants.ALERT_MESSAGGE_EXPECT)));
+
 
     }
 }

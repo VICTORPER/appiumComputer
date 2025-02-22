@@ -1,5 +1,7 @@
 Feature: Filter a computer to the Page
-  Background:  Given  I am on the computer database page
+  Background:
+
+    Given  I am on the computer database page
   Scenario: Successfully filter a computer
 
     When I filter a computer by his name

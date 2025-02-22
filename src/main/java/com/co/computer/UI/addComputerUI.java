@@ -21,6 +21,5 @@ public class addComputerUI {
             .located(By.id("company"));
     public static final Target BUTTON_CONFIRM = Target.the("Boton confirmar")
             .located(By.cssSelector("input[type='submit']"));
-    public static final Target Compare = Target.the("Capture name")
-            .locatedBy("//em[text()='Nothing to display']");
+
 }

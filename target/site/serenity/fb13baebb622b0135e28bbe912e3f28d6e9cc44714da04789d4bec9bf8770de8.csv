@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Add a new computer to the database","Successfully add a new computer","ERROR","2025-02-21T19:34:21.5307958-05:00[America/Bogota]","0.0","43.04"
+"Filter failed","Failed filter due user nothing type on filter field","FAILURE","2025-02-22T16:34:14.2070441-05:00[America/Bogota]","0.0","77.43"

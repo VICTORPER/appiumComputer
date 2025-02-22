@@ -151,7 +151,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 21-02-2025 22:23</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-02-2025 16:34</span>
     <br style="clear:left"/>
 </div>
 
@@ -186,9 +186,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Failed filter due user nothing type on filter field
+                                <span class="failing-color">Failed filter due user nothing type on filter field
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -205,28 +205,63 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: a string containing 'Please fill out this field.' but: was ''</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.co.computer.stepdefinitions.filterFailedStepDefinition.theSystemShowAlertMessage(filterFailedStepDefinition.java:40)<br />✽.The system show alert message(file:///F:/appiumPragma/src/test/resources/features/filterFailed.feature:8)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource5086208153018732107.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="236c1ac875866784ef0664d9ba6c7d2f2d5920b175f092fe9e536fc8a4678bd5.png" title=" Given I am on the computer database page" width="1080"/>
-                <img src="61fea4f1cf056a145f8d4a46eb0da95bf767a6d5f83d967ddb93257fab91dd62.png" title=" usuario opens the browser at http://computer-database.gatling.io/computers?f=computer" width="1080"/>
-                <img src="c89eac9eab0081077c163f24b3fbf44092da156ffb45c42b49f80601567c2179.png" title=" usuario opens the browser at http://computer-database.gatling.io/computers?f=computer (completed)" width="1080"/>
-                <img src="c89eac9eab0081077c163f24b3fbf44092da156ffb45c42b49f80601567c2179.png" title=" Given I am on the computer database page (completed)" width="1080"/>
-                <img src="02736eb05280b906654d46e96080de531049a2a6aeb2f7c7d925a6690d5d4566.png" title=" When I filter failed a computer
+                <img src="c4df93f1820c5806e2456d7d44eca6fdf36e99cdb4e6534677e145b426a3a877.png" title=" Given I am on the computer database page" width="1080"/>
+                <img src="c4df93f1820c5806e2456d7d44eca6fdf36e99cdb4e6534677e145b426a3a877.png" title=" usuario opens the browser at http://computer-database.gatling.io/computers" width="1080"/>
+                <img src="5c69e97536fc9ee0965d4808425035acad071893ad6be851bf1e35edf190d9db.png" title=" usuario opens the browser at http://computer-database.gatling.io/computers (completed)" width="1080"/>
+                <img src="5c69e97536fc9ee0965d4808425035acad071893ad6be851bf1e35edf190d9db.png" title=" Given I am on the computer database page (completed)" width="1080"/>
+                <img src="199d56850d75721c637ef3a562b42563110a90480c7b81b4360752450a8c658e.png" title=" When I filter failed a computer
 | computername |
 |  |" width="1080"/>
-                <img src="02736eb05280b906654d46e96080de531049a2a6aeb2f7c7d925a6690d5d4566.png" title=" Usuario filter computer task" width="1080"/>
-                <img src="02736eb05280b906654d46e96080de531049a2a6aeb2f7c7d925a6690d5d4566.png" title=" usuario enters '' into Campo para filtrar por nombre" width="1080"/>
-                <img src="02736eb05280b906654d46e96080de531049a2a6aeb2f7c7d925a6690d5d4566.png" title=" usuario clicks on Boton para buscar por el nombre filtrado" width="1080"/>
-                <img src="8cb2407c2849d606cdfde1b2601bdd81a57aa73040a4853b266eb25d6bf87966.png" title=" usuario clicks on Boton para buscar por el nombre filtrado" width="1080"/>
-                <img src="f712a4aa9108769e50b911d775252d72651e0e4a0476be2e769e370d694791c0.png" title=" usuario clicks on Boton para buscar por el nombre filtrado (completed)" width="1080"/>
-                <img src="f712a4aa9108769e50b911d775252d72651e0e4a0476be2e769e370d694791c0.png" title=" Usuario filter computer task (completed)" width="1080"/>
-                <img src="f712a4aa9108769e50b911d775252d72651e0e4a0476be2e769e370d694791c0.png" title=" When I filter failed a computer
+                <img src="199d56850d75721c637ef3a562b42563110a90480c7b81b4360752450a8c658e.png" title=" Usuario filter computer task" width="1080"/>
+                <img src="199d56850d75721c637ef3a562b42563110a90480c7b81b4360752450a8c658e.png" title=" usuario enters '' into Campo para filtrar por nombre" width="1080"/>
+                <img src="c2f599cc3b3ff6defa02f532e9d5b746a5dcb83ef6f0e6408abc695acde48138.png" title=" usuario enters '' into Campo para filtrar por nombre (completed)" width="1080"/>
+                <img src="c2f599cc3b3ff6defa02f532e9d5b746a5dcb83ef6f0e6408abc695acde48138.png" title=" usuario clicks on Boton para buscar por el nombre filtrado" width="1080"/>
+                <img src="0fd0b650c11cbd6b4dbdf62b73d70f19dc62c04e0f3d60ffc57442cab8ce41f6.png" title=" usuario clicks on Boton para buscar por el nombre filtrado" width="1080"/>
+                <img src="6be5b52a328b786b7daaffd01540ba34eaf2fabd98291ca829ad6df62e93823a.png" title=" usuario clicks on Boton para buscar por el nombre filtrado (completed)" width="1080"/>
+                <img src="6be5b52a328b786b7daaffd01540ba34eaf2fabd98291ca829ad6df62e93823a.png" title=" Usuario filter computer task (completed)" width="1080"/>
+                <img src="6be5b52a328b786b7daaffd01540ba34eaf2fabd98291ca829ad6df62e93823a.png" title=" When I filter failed a computer
 | computername |
 |  | (completed)" width="1080"/>
-                <img src="17628fd50cbb251dd94f9b1ac46549a08d9830647aa97e52fe697b5fcea804a3.png" title=" Then The system show alert message" width="1080"/>
-                <img src="17628fd50cbb251dd94f9b1ac46549a08d9830647aa97e52fe697b5fcea804a3.png" title=" Then the title of the page should be a string containing 'Computers database'" width="1080"/>
-                <img src="34db089c2ecf1f61e84e14647d41e8f7fbba7ac9a1be215edf2803ca2a2dff88.png" title=" Then the title of the page should be a string containing 'Computers database' (completed)" width="1080"/>
-                <img src="34db089c2ecf1f61e84e14647d41e8f7fbba7ac9a1be215edf2803ca2a2dff88.png" title=" Then The system show alert message (completed): <span class='success-color'>SUCCESS</span>" width="1080"/>
+                <img src="6be5b52a328b786b7daaffd01540ba34eaf2fabd98291ca829ad6df62e93823a.png" title=" Then The system show alert message" width="1080"/>
+                <img src="6be5b52a328b786b7daaffd01540ba34eaf2fabd98291ca829ad6df62e93823a.png" title=" Then alert message should be a string containing 'Please fill out this field.': <span class='failing-color'>FAILURE</span>" width="1080"/>
             </div>
         </div>
 

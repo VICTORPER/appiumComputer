@@ -28,7 +28,7 @@ public class filterComputerStepDefinition {
     @Given("I am on the computer database page")
     public void iAmOnTheComputerDatabasePage() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                Open.url("http://computer-database.gatling.io/computers?f=computer"));
+                Open.url("http://computer-database.gatling.io/computers"));
     }
     @When("I filter a computer by his name")
     public void iFilterAComputerByHisName(DataTable dataTable) {
@@ -44,7 +44,7 @@ public class filterComputerStepDefinition {
 
         theActorInTheSpotlight().should(
                 GivenWhenThen.seeThat(
-                        TheWebPage.title(),
+                        comparedName.compare(),
                         Matchers.containsString(Constants.NAME_FOUND)).orComplainWith(messageException.class, Constants.MessageExceptionCompare));
     }
 

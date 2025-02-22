@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Navigate Page","Navigate until page number 40","FAILURE","2025-02-21T23:05:24.8681315-05:00[America/Bogota]","0.0","33.39"
+"Filter failed","Failed filter due user nothing type on filter field","FAILURE","2025-02-22T16:34:14.2070441-05:00[America/Bogota]","0.0","77.43"

@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Filter failed" skipped="0" tests="1" time="33.84" timestamp="2025-02-21 10:23:48"><testcase name="Failed filter due user nothing type on filter field"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Filter failed" skipped="0" tests="1" time="77.43" timestamp="2025-02-22 04:34:14"><testcase name="Failed filter due user nothing type on filter field"><failure message="&#13;&#10;Expected: a string containing &quot;Please fill out this field.&quot;&#13;&#10;     but: was &quot;&quot;" type="java.lang.AssertionError">&#13;
+Expected: a string containing "Please fill out this field."&#13;
+     but: was ""</failure><system-err>&#13;
+Expected: a string containing "Please fill out this field."&#13;
+     but: was ""&#13;
+com.co.computer.stepdefinitions.filterFailedStepDefinition.theSystemShowAlertMessage(filterFailedStepDefinition.java:40)&#13;
+✽.The system show alert message(file:///F:/appiumPragma/src/test/resources/features/filterFailed.feature:8)&#13;
+</system-err></testcase></testsuite>

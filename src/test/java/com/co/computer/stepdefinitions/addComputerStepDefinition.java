@@ -3,6 +3,8 @@ package com.co.computer.stepdefinitions;
 import com.co.computer.UI.addComputerUI;
 import com.co.computer.exception.messageException;
 import com.co.computer.models.Computer;
+import com.co.computer.questions.comparedName;
+import com.co.computer.questions.messageDone;
 import com.co.computer.tasks.addComputerTask;
 import com.co.computer.utils.Constants;
 import com.co.computer.utils.SetUp;
@@ -59,7 +61,7 @@ public class addComputerStepDefinition {
     public void heShouldSeeASuccessMessage() {
         theActorInTheSpotlight().should(
                 GivenWhenThen.seeThat(
-                        TheWebPage.title(),
+                        messageDone.done(),
                         Matchers.containsString(Constants.NAME_COMPARATION)).orComplainWith(messageException.class, Constants.MessageExceptionCompare));
     }
 
