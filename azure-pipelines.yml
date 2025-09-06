@@ -1,0 +1,54 @@
+trigger:
+- main   # Cambia si usas otra rama
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: BuildAndTest
+  displayName: "Compilar y ejecutar pruebas con Serenity + Gradle"
+  steps:
+  - checkout: self
+
+  # Instalar Java 11
+  - task: JavaToolInstaller@0
+    inputs:
+      versionSpec: '11'
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled'
+
+  # Ejecutar Gradle (si fallan pruebas, continuar)
+  - task: Gradle@2
+    inputs:
+      gradleWrapperFile: 'gradlew'
+      tasks: 'clean test aggregate'
+      publishJUnitResults: true
+      testResultsFiles: '**/build/test-results/test/TEST-*.xml'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: 11
+      jdkArchitectureOption: 'x64'
+    continueOnError: true   # 👈 no detiene el pipeline aunque fallen pruebas
+
+  # Publicar resultados JUnit (Azure Test Runs)
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: '**/build/test-results/test/TEST-*.xml'
+      failTaskOnFailedTests: false   # 👈 evita marcar como fallo duro
+    condition: succeededOrFailed()   # 👈 se ejecuta aunque Gradle falle
+
+  # Publicar reporte Serenity (HTML completo)
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: 'target/site/serenity'
+      artifact: 'serenity-report'
+      publishLocation: 'pipeline'
+    condition: succeededOrFailed()   # 👈 siempre publica, fallen o no fallen pruebas
+
+  # Publicar build completo (para release clásico si lo usas)
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: 'build'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
+    condition: succeededOrFailed()   # 👈 también siempre se sube
